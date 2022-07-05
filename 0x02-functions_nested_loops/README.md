@@ -1,1 +1,1 @@
-functions and nested loops
+new readme for nested loops
