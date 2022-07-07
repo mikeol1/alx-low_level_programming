@@ -1,1 +1,1 @@
-readme on debnuging
+This is a project geared toewards debugging in c
