@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * wrdcnt - counts the number of words in a string
  * @s: string to count
@@ -22,6 +23,7 @@ int wrdcnt(char *s)
 	n++;
 	return (n);
 }
+
 /**
  * strtow -  splits a string into words
  *
