@@ -1,82 +1,26 @@
 #include "main.h"
 
 /**
- * string_nconcat - a function that concatenates two strings.
+ * _calloc - allocates memory for an array of @nmemb elements of
+ * @size bytes each and returns a pointer to the allocated memory.
  *
- * @s1: first char
- * @s2: secound char
- * @n: unsigned int
+ * @nmemb: allocate memory for array
+ * @size: allocate element of size bytes
  *
- * Return: If the function fails, it should return NULL
-
+ * Return: pointer to the allocated memory.
  */
-
-char *string_nconcat(char *s1, char *s2, unsigned int n)
-
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	char *a;
 
-	unsigned int x, y, z;
+	unsigned int b;
 
-	char *s;
-
-
-
-	if (s1 == NULL)
-
-	{
-
-		x = 0;
-
-	}
-
-	else
-
-	{
-
-		for (x = 0; s1[x]; ++x)
-
-		;
-
-	}
-
-	if (s2 == NULL)
-
-	{
-
-		y = 0;
-
-	}
-
-	else
-
-	{
-
-		for (y = 0; s2[y]; ++y)
-
-		;
-
-	}
-
-	if (y > n)
-
-		y = n;
-
-	s = malloc(sizeof(char) * (x + y + 1));
-
-	if (s == NULL)
-
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-
-	for (z = 0; z < x; z++)
-
-		s[z] = s1[z];
-
-	for (z = 0; z < y; z++)
-
-		s[z + x] = s2[z];
-
-	s[x + y] = '\0';
-
-	return (s);
-
+	a = malloc(nmemb * size);
+	if (a == NULL)
+		return (NULL);
+	for (b = 0; b < (nmemb * size); b++)
+		a[b] = 0;
+	return (a);
 }
