@@ -15,7 +15,3 @@ nary_to_uint.c - function that converts a binary number to an unsigned int.
 
 
 4-clear_bit.c - function that sets the value of a bit to 0 at a given index.
-
-
-
-5-flip_bits.c - function that returns the number of bits you would need to flip to get from one number to another.
